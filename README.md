@@ -20,10 +20,12 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### About The Project
+This is slot game Necgabucs
+
 ### Built With
 
 * <a href="https://nodejs.org/en/">Nodejs.js</a> 
-* <a href="https://www.mongodb.com/">MongoDB</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
