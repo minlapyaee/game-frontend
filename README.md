@@ -35,10 +35,10 @@
  ### Installation
 
 
-1. Download a respository <a href="https://github.com/minlapyaee/">Repository</a>
+1. Download a respository <a href="https://github.com/minlapyaee/game-frontend.git">Repository</a>
 2. Clone the repo
    ```sh
-   git clone https://github.com/minlapyaee/
+   git clone https://github.com/minlapyaee/game-frontend.git
    ```
 3. Install NPM packages
    ```sh
