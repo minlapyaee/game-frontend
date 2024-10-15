@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slot Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="fullname"></div>
+      <ul class="menus">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="audit.html">Audit</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+      </ul>
+    </header>
+    <img src="./assets/images/pumpkin.png" alt="Background" id="bg-1" />
+    <audio id="spookyAudio" controls  autoplay>
+      <source src="./assets/sound/bg-music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="thunderAudio">
+      <source src="./assets/sound/thunder.mp3" type="audio/mp3">
+    </audio>
+    <div class="welcome-container">
+      <button>Let's Get Started</button>
+    </div>
+    <div class="no-balance-model-parent">
+      <div class="overlay"></div>
+      <div class="no-balance-model-child">
+        Not enough balance!
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="main-container">
+        <div class="win-container">
+          <div class="emoji"></div>
+          <div class="text">You Won!</div>
+        </div>
+        <div class="reels-wrapper">
+          <div class="reels">
+            <div class="reel" id="reel1">
+              <div>🍬</div>
+              <div>🎃</div>
+              <div>🔔</div>
+              <div>🪦</div>
+              <div>🦇</div>
+            </div>
+            <div class="reel" id="reel2">
+              <div>🍬</div>
+              <div>🎃</div>
+              <div>🕷️</div>
+              <div>🪦</div>
+              <div>🦇</div>
+            </div>
+            <div class="reel" id="reel3">
+              <div>🍬</div>
+              <div>🎃</div>
+              <div>🕷️</div>
+              <div>🪦</div>
+              <div>🦇</div>
+            </div>
+            <div class="reel" id="reel4">
+              <div>🍬</div>
+              <div>🎃</div>
+              <div>🕷️</div>
+              <div>🪦</div>
+              <div>🦇</div>
+            </div>
+            <div class="reel" id="reel5">
+              <div>🍬</div>
+              <div>🎃</div>
+              <div>🕷️</div>
+              <div>🪦</div>
+              <div>🦇</div>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <div id="balance">
+            1,000
+            <span class="balance-unit">Balance</span>
+          </div>
+          <label
+            >Bet <input type="number" id="bet" value="1" min="1" />
+          </label>
+          <label
+            >Lines (1-25)
+            <input type="number" id="paylines" value="1" min="1" max="25" />
+          </label>
+          <button id="spin">Spin</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-radial"></div>
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/game.js"></script>
+  </body>
+</html>

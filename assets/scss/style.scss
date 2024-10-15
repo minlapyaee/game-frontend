@@ -1,0 +1,187 @@
+
+.welcome-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  button {
+    background-color: #f98128;
+    border: 2px solid #fff;
+    font-size: 15px;
+    margin-top: 5px;
+    font-family: "Press Start 2P", system-ui;
+    padding: 15px 5px;
+    cursor: pointer;
+  }
+}
+.game-container {
+  display: none;
+  opacity: 0;
+}
+.no-balance-model-parent {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  display: none;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .no-balance-model-child {
+    background-color: #f98128;
+    padding: 12px;
+    text-align: center;
+  }
+}
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  .win-container {
+    width: 100%;
+    margin-bottom: 12px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    .emoji {
+      background-color: #f98128;
+      width: 150px;
+      height: 50px;
+      border-radius: 60px 40px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #000;
+        border-radius: 50%;
+        animation: eye-move 4s ease infinite alternate;
+        @keyframes eye-move {
+          0% {
+            transform: translate(-150%, -50%);
+          }
+          50% {
+            transform: translate(-100%, 20%);
+          }
+          80% {
+            transform: translate(100%, -20%);
+          }
+          100% {
+            transform: translate(80%, -50%);
+          }
+        }
+      }
+    }
+    .text {
+      color: #fff;
+      text-align: center;
+      margin-top: 6px;
+    }
+  }
+  .reels-wrapper {
+    .reels {
+      display: flex;
+      .reel {
+        width: 100px;
+        height: 270px;
+        overflow: hidden;
+        border: 2px solid #333;
+        background-color: #444;
+        position: relative;
+        div {
+          height: 90px;
+          line-height: 80px;
+          text-align: center;
+          font-size: 32px;
+          border-bottom: 2px solid #222;
+          animation: fade-in .7s ease infinite alternate;
+          animation-play-state: paused;
+          background-color: #444;
+          @keyframes fade-in {
+            0% {
+                background-color: #444;
+            }
+        
+            100% {
+                background-color: #e4630085;
+            }
+          }
+        }
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    label {
+      color: #fff;
+      font-size: 10px;
+      input {
+        width: 65px;
+        display: block;
+        background-color: #f98128;
+        border: 2px solid #fff;
+        font-size: 15px;
+        margin-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: "Press Start 2P", system-ui;
+        padding: 5px;
+      }
+    }
+  }
+  #balance {
+    background-color: #f98128;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px 48px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .balance-unit {
+      display: block;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+  }
+  #spin {
+    background: #50ff00;
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 19px;
+    padding: 0px 20px;
+    width: fit-content;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #50ff00;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+}
