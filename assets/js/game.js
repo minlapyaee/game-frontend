@@ -54,7 +54,6 @@ async function createAudit(info) {
     body: JSON.stringify({ userID: user._id, info, balance }),
   });
   const res = await response.json();
-  console.log("res", res);
 }
 document
   .querySelector(".welcome-container")
@@ -116,7 +115,6 @@ function spinReels() {
         () => symbols[Math.floor(Math.random() * symbols.length)]
       )
     );
-    console.log(reels);
     displayReels(reels);
     gsap.from(".reel div", {
       duration: 2,
@@ -126,7 +124,6 @@ function spinReels() {
         balance += totalWin;
         localStorage.setItem("user", JSON.stringify({ ...user, balance }));
         updateBalance();
-        console.log("Result: ", totalWin > 0 ? "Wins" : "Lose");
         isSpinning = false;
       },
     });
@@ -160,12 +157,9 @@ function checkWins(reels, numPaylines, betPerLine) {
   for (let i = 0; i < numPaylines; i++) {
     const payline = paylines[i];
     const firstSymbol = reels[0][payline[0]];
-    console.log("firstSymbol", firstSymbol);
-    console.log("payline", payline);
     const isWin = reels.every(
       (reel, index) => reel[payline[index]] === firstSymbol
     );
-    console.log("isWin", isWin);
     if (isWin) {
       payline.forEach((number, index) => {
         const elements = document.querySelectorAll(`#reel${index + 1} div`);

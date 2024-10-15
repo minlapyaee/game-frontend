@@ -28,13 +28,11 @@ async function createUser() {
     user = res.data;
     localStorage.setItem("user", JSON.stringify(user));
     document.querySelector("header .fullname").innerHTML = user.fullname;
-    console.log(res);
   } else {
     user = JSON.parse(getUser);
     balance = user.balance;
     document.querySelector("header .fullname").innerHTML = user.fullname;
     updateBalance();
-    console.log(user);
   }
 }
 createUser();
