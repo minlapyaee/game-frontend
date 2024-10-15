@@ -46,7 +46,7 @@ This is slot game Mechanics
    ```sh
    npm install
    ```
-4. Run a scss files
+4. Run - complier for css and js to minify the code
    ```sh
    gulp devWatch
    ```  
