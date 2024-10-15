@@ -21,7 +21,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### About The Project
-This is slot game Necgabucs
+This is slot game Mechanics
 
 ### Built With
 
